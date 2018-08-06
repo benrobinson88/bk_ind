@@ -74,9 +74,9 @@ const numberWithCommas = (x) => {
 
 function getTotal()
 {
-    var total_avail = numberWithCommas(Math.round((getIncome()*5 + getSavings()*.1 -
+    var total_avail = Math.round((getIncome()*5 + getSavings()*.1 -
                           getRent()*12) / (getBK_Ind_Kids()
-                          + .2*getTotalKids())));
+                          + .2*getTotalKids()));
 
     if (total_avail > 90000)
     {
@@ -102,7 +102,7 @@ function getTotal()
  
     //display the result
     document.getElementById('totalTuition').innerHTML =
-                                      "Total Tuition for one year $"+tuition;
+                                      "Total Tuition for one year $"+tuition+"total avail is"+total_avail;
  
 }
 
