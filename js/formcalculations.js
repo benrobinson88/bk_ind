@@ -74,7 +74,7 @@ const numberWithCommas = (x) => {
 
 function getTotal()
 {
-    var total_avail = numberWithCommas(Math.round((getIncome() + getSavings()*.1 -
+    var total_avail = numberWithCommas(Math.round((getIncome()*5 + getSavings()*.1 -
                           getRent()*12) / (getBK_Ind_Kids()
                           + .2*getTotalKids())));
 
