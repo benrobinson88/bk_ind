@@ -76,9 +76,9 @@ function getTotal()
 {
     var total_avail = Math.round((getIncome()* + getSavings()*.1 -
                           getRent()*12) / (getBK_Ind_Kids()
-                          + .2*getTotalKids()));
+                          + .3*getTotalKids()));
 
-    if (total_avail > 90000)
+    if (total_avail > 100000)
     {
         var tuition = numberWithCommas(42500)
     }
@@ -86,17 +86,17 @@ function getTotal()
     else if (total_avail > 80000)
     {
 
-        var tuition = numberWithCommas(30000)
+        var tuition = numberWithCommas(Math.min(.3*total_avail,42500))
     }
 
     else if (total_avail > 60000)
     {
-        var tuition = numberWithCommas(10000)
+        var tuition = numberWithCommas(Math.min(.15*total_avail,42500))
     }
 
     else
     {
-        var tuition = numberWithCommas(500)
+        var tuition = numberWithCommas(Math.max(.1*total_avail,500))
     }
 
  
