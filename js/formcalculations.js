@@ -78,18 +78,18 @@ function getTotal()
                           getRent()*12) / (getBK_Ind_Kids()
                           + .2*getTotalKids())));
 
-    if (total_avail > 300000)
+    if (total_avail > 90000)
     {
         var tuition = numberWithCommas(42500)
     }
 
-    else if (total_avail > 200000)
+    else if (total_avail > 80000)
     {
 
         var tuition = numberWithCommas(30000)
     }
 
-    else if (total_avail > 100000)
+    else if (total_avail > 60000)
     {
         var tuition = numberWithCommas(10000)
     }
