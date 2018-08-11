@@ -74,19 +74,25 @@ const numberWithCommas = (x) => {
 
 function getTotal()
 {
-    var total_avail = Math.round((getIncome() + getSavings()*.1 -
+    var total_avail = Math.round((getIncome() -
                           getRent()*12) / (getBK_Ind_Kids()
-                          + .3*getTotalKids()));
+                          + .3*getTotalKids())+getSavings());
 
     if (total_avail > 300000)
     {
         var tuition = numberWithCommas(42500)
     }
 
-    else if (total_avail > 60000)
+    else if (total_avail > 200000)
     {
 
-        var tuition = numberWithCommas(Math.min(Math.round(.1*total_avail),42500))
+        var tuition = numberWithCommas(Math.min(Math.round(.3*total_avail),42500))
+    }
+
+    else if (total_avail > 100000)
+    {
+
+        var tuition = numberWithCommas(Math.min(Math.round(.2*total_avail), 42500))
     }
 
     else
