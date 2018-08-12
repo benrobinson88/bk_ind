@@ -103,7 +103,7 @@ function getTotal()
  
     //display the result
     document.getElementById('totalTuition').innerHTML =
-                                      "Total Tuition for one year $"+tuition;
+                                      "Total Tuition for one year: $"+tuition;
  
 }
 
