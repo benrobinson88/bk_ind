@@ -80,19 +80,19 @@ function getTotal()
 
     if (total_avail > 300000)
     {
-        var tuition = numberWithCommas(42500)
+        var tuition = numberWithCommas(32000)
     }
 
     else if (total_avail > 200000)
     {
 
-        var tuition = numberWithCommas(Math.min(Math.round(.3*total_avail),42500))
+        var tuition = numberWithCommas(Math.min(Math.round(.3*total_avail),32000))
     }
 
     else if (total_avail > 100000)
     {
 
-        var tuition = numberWithCommas(Math.min(Math.round(.2*total_avail), 42500))
+        var tuition = numberWithCommas(Math.min(Math.round(.2*total_avail), 32000))
     }
 
     else
